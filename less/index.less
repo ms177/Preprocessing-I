@@ -59,39 +59,60 @@ html, body {
 
 
 
-@page-title-color: #E57373;
-@title-color: #EF9A9A;
-@general-text-color:#FFCDD2; 
-@title-size: 20px;
+@page-title-color: #C62828;
+@page-title-size: 50px;
+@title-color: #212121;
+@general-text-color:#424242; 
+@title-size: 30px;
 @text-size: 16px;
-@background-color: #4C5C96;
-.section-margin (margin-lenght){
-margin: margin-lenght;
+@background-color: #BBDEFB;
+.section-margin (@margin-lenght){
+margin: @margin-lenght;
+}
+.line-spacing(@spacing){
+	padding-top: @spacing;
+	padding-bottom: @spacing;
+}
+.display-flex{
+	display:flex;
+	flex-wrap: wrap;
+	width: 40%;
 }
 
 .body-format{
-	height: 100vh;
+	width: auto;
+	height: 100%;
 }
+
 
 section{
 	color:@general-text-color;
-	background-color: #4C5C96;
-	border: 1px solid black;
+	background-color: @background-color;
+	.section-margin(2%);
 	
 	a {
 		text-decoration: none;
 		color: @general-text-color;
+		display: flex;
+		.line-spacing(10px)
+	}
+	p{
+		.section-margin(2%);
+	}
+	.work-experience-list{
+		.display-flex
 	}
 }
 
 
 h1{
 	color: @page-title-color;
-
-
-
+	font-size: @page-title-size;
+	.section-margin(2%);
+	
 }
 .intro-title{
 	color: @title-color;
 	font-size: @title-size;
 }
+
