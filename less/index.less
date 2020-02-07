@@ -4,6 +4,7 @@
    License: none (public domain)
 */
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +24,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Playfair Display', serif;
+font-family: 'PT Serif', serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -70,16 +73,22 @@ html, body {
 	padding: 5px 0;
 }
 
+.media-mobile(@width){
+	@media only screen and (max-width: @width){
+		width: 100%;
+		flex-direction: column;
+		
+	}
+}
 
-
-.detail-header-format{
+.detail-header-format(){
 	font-size: 18px;
 	.font-weight-1000;
 	margin: 20px 0px;
 	padding: 5px;
 }
 
-.display{
+.display(){
 	display: flex;
 	flex-direction: column;
 
@@ -89,6 +98,7 @@ html, body {
 	display: flex;
 	flex-direction: row;
 	margin: auto;
+	.media-mobile(500px);
 	
 }
 
@@ -97,11 +107,13 @@ html, body {
 	width: 20vw;
 	color: @text-white;
 	background-color: @title-background;
+	.media-mobile(500px);
 }
 
 .right-panel{
 	.display;
 	width: 60vw;
+	.media-mobile(500px);
 }
 
 .name{
@@ -166,4 +178,8 @@ html, body {
 }
  ul{
 	 list-style-type: circle;
+ }
+
+ @media screen only (max-width: 500px){
+	 width: 100%;
  }
