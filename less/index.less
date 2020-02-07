@@ -4,6 +4,7 @@
    License: none (public domain)
 */
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,6 +24,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Playfair Display', serif;
+font-family: 'PT Serif', serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,6 +57,126 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	
 }
+
+@text-white: white;
+@title-background: #003D73;
+@line-height: 25px;
+.font-weight-1000{
+	font-weight: 1000;
+}
+@border: 1px solid gray;
+.bold-text{
+	.font-weight-1000;
+	padding: 5px 0;
+}
+
+.media-mobile(@width){
+	@media only screen and (max-width: @width){
+		width: 100%;
+		flex-direction: column;
+		
+	}
+}
+
+.detail-header-format(){
+	font-size: 18px;
+	.font-weight-1000;
+	margin: 20px 0px;
+	padding: 5px;
+}
+
+.display(){
+	display: flex;
+	flex-direction: column;
+
+}
+
+.two-panels{
+	display: flex;
+	flex-direction: row;
+	margin: auto;
+	.media-mobile(500px);
+	
+}
+
+.left-panel{
+	.display;
+	width: 20vw;
+	color: @text-white;
+	background-color: @title-background;
+	.media-mobile(500px);
+}
+
+.right-panel{
+	.display;
+	width: 60vw;
+	.media-mobile(500px);
+}
+
+.name{
+	font-size: 28px;
+	line-height: @line-height + 10px;
+	margin: 20px 0;
+	.font-weight-1000
+}
+
+.current-job-title{
+	font-size: 20px;
+}
+
+.detail-header{
+	background-color: darken(@title-background,10%);
+	.detail-header-format;
+}
+
+.text-format-regular{
+	line-height: @line-height;
+}
+
+.regular-text{
+	margin: 20px 20px;
+	line-height: @line-height;
+}
+
+.detail-header-right{
+	.detail-header-format;
+	margin: 20px 0;
+	color: @title-background;
+	.font-weight-1000;
+	border-top: @border;
+	border-bottom: @border;
+	
+}
+
+.table-format{
+	.display;
+	align-items: left;
+}
+
+.table-left{
+	width: 20%;
+	text-align: left;
+	margin: 0 20px;
+	padding: 0 20px;
+}
+
+.table-right{
+	width: 70%;
+	text-align: left;
+	padding: 20px;
+}
+
+.text-format-bold{
+	.bold-text;
+}
+
+.italic-text{
+	font-style: italic;
+}
+ ul{
+	 list-style-type: circle;
+ }
 
