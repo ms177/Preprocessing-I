@@ -134,66 +134,96 @@ html,
 body {
   height: 100%;
 }
-.display-flex {
+.font-weight-1000 {
+  font-weight: 1000;
+}
+.bold-text {
+  font-weight: 1000;
+  padding: 5px 0;
+}
+.detail-header-format {
+  font-size: 18px;
+  font-weight: 1000;
+  margin: 20px 0px;
+  padding: 5px;
+}
+.display {
   display: flex;
-  flex-wrap: wrap;
-}
-.body-format {
-  margin: auto;
-  width: 70vw;
-  height: 100vh;
-}
-section {
-  color: #424242;
-  margin: 2%;
-  padding: 10px;
-  border: 1px solid gray;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
-}
-section a {
-  text-decoration: none;
-  color: #424242;
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-section p {
-  margin: 2%;
-  padding: 10px;
-}
-section .work-experience-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.item-list {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  border: none;
-  box-shadow: none;
-  width: 20vw;
-  margin: 0;
 }
-.item-list div {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-.education-list {
+.two-panels {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  margin: auto;
 }
-h1 {
-  color: #C62828;
-  font-size: 50px;
-  margin: 2%;
-  padding: 10px;
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  color: white;
+  background-color: #003D73;
 }
-.intro-title {
-  color: #212121;
-  font-size: 30px;
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
 }
-.hidden {
-  visibility: hidden;
+.name {
+  font-size: 28px;
+  line-height: 35px;
+  margin: 20px 0;
+  font-weight: 1000;
+}
+.current-job-title {
+  font-size: 20px;
+}
+.detail-header {
+  background-color: #002240;
+  font-size: 18px;
+  font-weight: 1000;
+  margin: 20px 0px;
+  padding: 5px;
+}
+.text-format-regular {
+  line-height: 25px;
+}
+.regular-text {
+  margin: 20px 20px;
+  line-height: 25px;
+}
+.detail-header-right {
+  font-size: 18px;
+  margin: 20px 0px;
+  padding: 5px;
+  margin: 20px 0;
+  color: #003D73;
+  font-weight: 1000;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.table-format {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.table-left {
+  width: 20%;
+  text-align: left;
+  margin: 0 20px;
+  padding: 0 20px;
+}
+.table-right {
+  width: 70%;
+  text-align: left;
+  padding: 20px;
+}
+.text-format-bold {
+  font-weight: 1000;
+  padding: 5px 0;
+}
+.italic-text {
+  font-style: italic;
+}
+ul {
+  list-style-type: circle;
 }

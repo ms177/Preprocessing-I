@@ -58,96 +58,112 @@ html, body {
 	
 }
 
-
-
-@page-title-color: #C62828;
-@page-title-size: 50px;
-@title-color: #212121;
-@general-text-color:#424242; 
-@title-size: 30px;
-@text-size: 16px;
-
-.section-margin (@margin-lenght){
-margin: @margin-lenght;
-padding: 10px;
+@text-white: white;
+@title-background: #003D73;
+@line-height: 25px;
+.font-weight-1000{
+	font-weight: 1000;
+}
+@border: 1px solid gray;
+.bold-text{
+	.font-weight-1000;
+	padding: 5px 0;
 }
 
 
 
-.line-spacing(@spacing){
-	padding-top: @spacing;
-	padding-bottom: @spacing;
-}
-.display-flex{
-	display:flex;
-	flex-wrap: wrap;
-	
-	
-	
+.detail-header-format{
+	font-size: 18px;
+	.font-weight-1000;
+	margin: 20px 0px;
+	padding: 5px;
 }
 
-.body-format{
-	margin: auto;
-	width: 70vw;
-	height: 100vh;
-	
-}
-
-
-section{
-	color:@general-text-color;
-
-	.section-margin(2%);
-	border: 1px solid gray;
-	box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
-	
-	
-	a{
-		text-decoration: none;
-		color: @general-text-color;
-		display: flex;
-		.line-spacing(10px);
-	}
-	p{
-		.section-margin(2%);
-
-		
-	}
-
-	.work-experience-list{
-	.display-flex;
-	justify-content: space-between;
-}
-}
-
-.item-list{
-	.display-flex;
+.display{
+	display: flex;
 	flex-direction: column;
-	border: none;
-	box-shadow: none;
-	width: 20vw;
-	margin: 0;
-	div{
-		.line-spacing(4px)
-	}
+
 }
 
-.education-list{
-	.display-flex;
-	justify-content: space-between;
-}
-
-h1{
-	color: @page-title-color;
-	font-size: @page-title-size;
-	.section-margin(2%);
+.two-panels{
+	display: flex;
+	flex-direction: row;
+	margin: auto;
 	
 }
-.intro-title{
-	color: @title-color;
-	font-size: @title-size;
+
+.left-panel{
+	.display;
+	width: 20vw;
+	color: @text-white;
+	background-color: @title-background;
 }
 
-.hidden{
-	visibility: hidden;
+.right-panel{
+	.display;
+	width: 60vw;
 }
+
+.name{
+	font-size: 28px;
+	line-height: @line-height + 10px;
+	margin: 20px 0;
+	.font-weight-1000
+}
+
+.current-job-title{
+	font-size: 20px;
+}
+
+.detail-header{
+	background-color: darken(@title-background,10%);
+	.detail-header-format;
+}
+
+.text-format-regular{
+	line-height: @line-height;
+}
+
+.regular-text{
+	margin: 20px 20px;
+	line-height: @line-height;
+}
+
+.detail-header-right{
+	.detail-header-format;
+	margin: 20px 0;
+	color: @title-background;
+	.font-weight-1000;
+	border-top: @border;
+	border-bottom: @border;
+	
+}
+
+.table-format{
+	.display;
+	align-items: left;
+}
+
+.table-left{
+	width: 20%;
+	text-align: left;
+	margin: 0 20px;
+	padding: 0 20px;
+}
+
+.table-right{
+	width: 70%;
+	text-align: left;
+	padding: 20px;
+}
+
+.text-format-bold{
+	.bold-text;
+}
+
+.italic-text{
+	font-style: italic;
+}
+ ul{
+	 list-style-type: circle;
+ }
